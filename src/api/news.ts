@@ -1,8 +1,13 @@
 var superagent = require("superagent");
-var charset = require("superagent-charset");
-charset(superagent);
+// var charset = require("superagent-charset");
+// charset(superagent);
+// superagent.buffer[mime] = true;
 const cheerio = require("cheerio");
 import { weiboTopTemplate } from "../template";
+const Promise = require("bluebird");
+Promise.config({
+  cancellation: true,
+});
 
 /**
  * 查weibo热点
@@ -15,6 +20,7 @@ const queryHotNews = () => {
   return new Promise((resolve, reject) => {
     superagent
       .get("https://s.weibo.com/top/summary")
+      .buffer(true)
       .charset("utf-8")
       .end(function (err, res) {
         var items = [];
