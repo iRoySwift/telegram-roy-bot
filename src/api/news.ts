@@ -16,13 +16,13 @@ const queryHotNews = () => {
     superagent
       .get("https://s.weibo.com/top/summary")
       .charset("utf-8")
-      .end(function (err, sres) {
+      .end(function (err, res) {
         var items = [];
         if (err) {
           console.log("ERR: " + err);
-          return err;
+          return reject(err);
         }
-        var $ = cheerio.load(sres.text);
+        var $ = cheerio.load(res.text);
         $("div.data table tbody tr td.td-02").each(function (index, element) {
           var $element = $(element);
           var $a = $element.find("a");
