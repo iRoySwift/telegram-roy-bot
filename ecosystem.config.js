@@ -1,21 +1,18 @@
 module.exports = {
   apps: [
     {
+      name: "Bot",
       script: "./dist/index.js",
       watch: ".",
-    },
-    {
-      script: "./service-worker/",
-      watch: ["./service-worker"],
     },
   ],
 
   deploy: {
     production: {
-      user: "SSH_USERNAME",
-      host: "SSH_HOSTMACHINE",
+      user: "root",
+      host: "localhost",
       ref: "origin/master",
-      repo: "GIT_REPOSITORY",
+      repo: "git@github.com:realRoyHsu/telegram-roy-bot.git",
       path: "DESTINATION_PATH",
       "pre-deploy-local": "",
       "post-deploy":
