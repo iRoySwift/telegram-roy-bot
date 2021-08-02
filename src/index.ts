@@ -1,3 +1,4 @@
+process.env.NTBA_FIX_319 = "1";
 import TelegramBot from "node-telegram-bot-api";
 import { getNewHot } from "./controller/news";
 // import { getWeather } from "./controller/weather";
