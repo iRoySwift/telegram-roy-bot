@@ -1,4 +1,4 @@
-import { queryWeather } from "@/api/weather";
+import { queryWeather } from "../api/weather";
 
 // import getWeather from "./../api/weather";
 const getWeather = (message, match) => {

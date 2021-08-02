@@ -2,7 +2,7 @@ var superagent = require("superagent");
 var charset = require("superagent-charset");
 charset(superagent);
 const cheerio = require("cheerio");
-import { weiboTopTemplate } from "@/template";
+import { weiboTopTemplate } from "../template";
 
 /**
  * 查weibo热点

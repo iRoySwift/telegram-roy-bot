@@ -1,4 +1,4 @@
-import { queryHotNews } from "@/api/news";
+import { queryHotNews } from "../api/news";
 import { bot } from "..";
 
 const getNewHot = (message, match) => {
