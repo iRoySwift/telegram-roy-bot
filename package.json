@@ -7,7 +7,7 @@
     "tsc": "tsc",
     "start": "ts-node-dev --respawn --transpile-only app.ts",
     "prod": "tsc && node ./dist",
-    "pm2": "tsc && pm2 start ./dist/index.js",
+    "pm2": "tsc && sudo pm2 ecosystem",
     "lint": "eslint --ext .js --ext .ts src/index.js",
     "lint-fix": "eslint --fix --ext .js --ext .ts src/"
   },

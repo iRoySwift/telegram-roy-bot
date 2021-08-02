@@ -5,9 +5,9 @@ import { startMessage, helpMessage } from "./template/index";
 const token = "1929229553:AAFg-CdZehykDuXX_zU2V2b-5Zm3KHsSBIw";
 const bot = new TelegramBot(token, {
   polling: true,
-  request: {
-    proxy: "http://127.0.0.1:7890",
-  },
+  // request: {
+  //   proxy: "http://127.0.0.1:7890",
+  // },
 });
 
 bot.onText(/\/start/, (message) => {
